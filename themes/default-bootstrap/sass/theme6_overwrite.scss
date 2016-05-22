@@ -1,0 +1,219 @@
+@charset "UTF-8";
+// Make sure the charset is set appropriately
+
+@import "compass";
+@import "compass/reset";
+@import "theme_variables";
+@import "bootstrap";
+
+
+$color-shadow:          0 1px #567931;
+
+@mixin bg-gradient($startColor, $endColor){
+	background-color: $startColor ;
+	background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+	background: -webkit-linear-gradient(top, $startColor, $endColor);
+	background: -moz-linear-gradient(top, $startColor, $endColor);
+	background: -ms-linear-gradient(top, $startColor, $endColor);
+	background: -o-linear-gradient(top, $startColor, $endColor);
+}
+@mixin site-background() {
+    background: #4bbe3f!important;
+    background: -webkit-linear-gradient(top, #69F15C, #3E8636) !important;
+    background: -ms-linear-gradient(top, #69F15C, #3E8636) !important;
+    background: -moz-linear-gradient(top, #69F15C, #3E8636) !important;
+    background: linear-gradient(to bottom, #69F15C, #3E8636) !important;
+}
+@mixin site-background-hover(){
+    background: #138407!important;
+    // background: -webkit-linear-gradient(top, #69F15C, #138407) !important;
+    // background: -ms-linear-gradient(top, #69F15C, #138407) !important;
+    // background: -moz-linear-gradient(top, #69F15C, #138407) !important;
+    // background: linear-gradient(to bottom, #69F15C, #138407) !important;
+}
+@mixin link-color (){
+	color:$menu-blue-color !important;
+    background: none!important;
+}
+@mixin link-hover() {
+	color:$menu-blue-color-hover !important;
+    background: none!important;
+    text-decoration: underline;
+}
+.columns-container {
+	background: url(../img/bg-smoke.jpg) !important;
+	#columns {
+		background: white;
+	}
+}
+//links 
+#usefull_link_block li a,
+#buy_block li a,
+#wishlist_button_nopop {
+  	@include link-color();
+	&:hover {
+	 	@include link-hover();
+	}
+}
+// buttons
+.button.button-medium:not(.exclusive) {
+	@include site-background();
+	border: 1px solid;
+	&:hover {
+		@include site-background-hover();
+		border-color: #69C412 !important;
+	}
+} 
+.button.ajax_add_to_cart_button:hover span {
+	@include site-background-hover();
+	border-color: #69C412 !important;
+}
+//top menu 
+ul.sf-menu  {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5e5e5+0,ffffff+99 */
+	background: rgb(229,229,229)!important; /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(229,229,229,1) 0%, rgba(255,255,255,1) 99%)!important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 99%)!important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 99%)!important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 )!important; /* IE6-9 */
+	box-shadow: 3px 3px 7px 0 rgba(105, 206, 95, .5), inset 0 -3px 0 0 #3a9731 !important;
+	& > li > ul > li a {
+		color: $menu-blue-color !important;
+		&:hover {
+			color: $menu-blue-color-hover !important;
+			text-decoration: underline;
+		}
+	}
+	@media only screen and (max-width: 320px) {
+		& > li > a {
+			font-size: 1em !important;
+		}
+	}
+	.submenu-container > li {
+		padding-bottom: 20px;
+	}
+}
+#search_block_top .btn.button-search{
+	@include site-background();
+	text-shadow:$color-shadow;
+   	&:hover{
+	   	color:white;
+		@include site-background-hover();
+		text-shadow:0 1px  #333;
+	}
+}
+#search_block_top #search_query_top{color:#686666}
+#header_user #shopping_cart a {
+	@include site-background();
+	color:white;
+	text-shadow:$color-shadow;
+	&:after{color:white}
+	&:hover{
+		color:white;
+		text-shadow:0 1px  #333;
+		@include site-background();
+	}		 
+ }
+ 
+.sf-menu{
+	background:#f6f6f6;
+	border-bottom:3px solid #e9e9e9;
+	>li, {
+		border-right:1px solid #d6d4d4;
+		> a {
+				border-bottom: 3px solid #e9e9e9;
+			}
+		&.sfHover > a, > a:hover, &.sfHoverForce > a {
+			color:#fff;
+			@include site-background();
+			border-bottom-color: #237EB9 !important;
+		}
+	}
+} 
+//Homepage Tabs
+#home-page-tabs {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d3d3d3+32,acada6+52,e5e5e5+100 */
+	background: rgb(211,211,211)!important; /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(211,211,211,1) 32%, rgba(172,173,166,1) 52%, rgba(229,229,229,1) 100%)!important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(211,211,211,1) 32%,rgba(172,173,166,1) 52%,rgba(229,229,229,1) 100%)!important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(211,211,211,1) 32%,rgba(172,173,166,1) 52%,rgba(229,229,229,1) 100%)!important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#e5e5e5',GradientType=0 )!important; /* IE6-9 */
+	a:hover, li.active a:hover{
+		@include site-background-hover();
+	}
+	li.active a {
+		@include site-background();
+	}
+}
+
+#left_column {
+	li a {
+	@include link-color();
+	&:hover {
+	    @include link-hover();
+	  }
+	}
+
+	li span.grower:hover + a, 
+	#categories_block_left li a:hover,
+	#categories_block_left li a.selected {
+		 	@include link-hover();
+	    text-decoration: underline;
+
+	}
+
+	#categories_block_left{
+		.title_block {
+			margin-top: 0 !important;
+		}
+		.tree.dynamized {
+			margin-top: -20px !important;
+			margin-bottom: 0 !important;
+			.last {
+				border-bottom: none;
+			}
+		}
+	}
+	  
+	.title_block {
+	  	box-shadow: 3px 3px 7px 0 rgba(105, 206, 95, .5), inset 0 -1px 0 0 #3a9731 !important;
+	    @include site-background();
+	    color:$light-text-color !important;
+	    border-top: none !important;
+	    border-radius: 5px;
+		a {
+			color:$light-text-color !important;
+		}
+	}
+	.layered_filter {
+		padding-left: 10px;
+	}
+  	.block {
+		border:1px solid #ccc;
+		border-radius: 5px;
+		box-shadow: 1px 0px 10px #467346;
+		margin-left: -2px;
+		& > div {
+			padding-left: 1px;
+			padding-right: 1px;
+		}
+	}
+}
+//manufacturer list in front-page
+.manufacturers_frontlist {
+	margin-top: 15px;
+	margin-bottom:15px;
+	.manufacturer-front-logo {
+		border: 1px solid #ccc;
+		padding: 5px;
+		text-align: center;
+		border-radius: 5px;
+		margin-bottom: 15px;
+	}
+}
+
+.box {
+	background: -moz-linear-gradient(to bottom, #F3EFEF 0%, #FFF8F8 99%)!important; /* FF3.6-15 */
+	background: -webkit-linear-gradient(to bottom, #F3EFEF 0%, #FFF8F8 99%)!important; /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #F3EFEF 0%, #FFF8F8 99%)!important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
