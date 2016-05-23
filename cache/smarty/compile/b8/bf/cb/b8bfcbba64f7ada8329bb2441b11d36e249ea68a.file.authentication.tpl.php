@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2016-05-22 12:30:20
+<?php /* Smarty version Smarty-3.1.19, created on 2016-05-22 22:10:16
          compiled from "Z:\home\wp-odyssey\www\prestashop\themes\default-bootstrap\authentication.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2267957417c2ce543d4-56624136%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:12438574204189f9969-88025292%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'b8bfcbba64f7ada8329bb2441b11d36e249ea68a' => 
     array (
       0 => 'Z:\\home\\wp-odyssey\\www\\prestashop\\themes\\default-bootstrap\\authentication.tpl',
-      1 => 1463909391,
+      1 => 1463930974,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2267957417c2ce543d4-56624136',
+  'nocache_hash' => '12438574204189f9969-88025292',
   'function' => 
   array (
   ),
@@ -26,18 +26,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'v' => 0,
     'inOrderProcess' => 0,
     'PS_GUEST_CHECKOUT_ENABLED' => 0,
-    'genders' => 0,
-    'gender' => 0,
-    'days' => 0,
-    'day' => 0,
-    'sl_day' => 0,
-    'months' => 0,
-    'k' => 0,
-    'sl_month' => 0,
-    'month' => 0,
-    'years' => 0,
-    'year' => 0,
-    'sl_year' => 0,
     'newsletter' => 0,
     'optin' => 0,
     'dlv_all_fields' => 0,
@@ -60,9 +48,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_57417c2da78d20_32232114',
+  'unifunc' => 'content_57420419937ab3_12732153',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57417c2da78d20_32232114')) {function content_57417c2da78d20_32232114($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_57420419937ab3_12732153')) {function content_57420419937ab3_12732153($_smarty_tpl) {?>
 <?php $_smarty_tpl->_capture_stack[0][] = array('path', null, null); ob_start(); ?>
 	<?php if (!isset($_smarty_tpl->tpl_vars['email_create']->value)) {?><?php echo smartyTranslate(array('s'=>'Authentication'),$_smarty_tpl);?>
 <?php } else { ?>
@@ -197,28 +185,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 						<input type="text" class="is_required validate form-control" data-validate="isEmail" id="guest_email" name="guest_email" value="<?php if (isset($_POST['guest_email'])) {?><?php echo $_POST['guest_email'];?>
 <?php }?>" />
 					</div>
-					<!-- <div class="cleafix gender-line">
-						<label><?php echo smartyTranslate(array('s'=>'Title'),$_smarty_tpl);?>
-</label>
-						<?php  $_smarty_tpl->tpl_vars['gender'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gender']->_loop = false;
- $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['genders']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['gender']->key => $_smarty_tpl->tpl_vars['gender']->value) {
-$_smarty_tpl->tpl_vars['gender']->_loop = true;
- $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['gender']->key;
-?>
-							<div class="radio-inline">
-								<label for="id_gender<?php echo $_smarty_tpl->tpl_vars['gender']->value->id;?>
-" class="top">
-									<input type="radio" name="id_gender" id="id_gender<?php echo $_smarty_tpl->tpl_vars['gender']->value->id;?>
-" value="<?php echo $_smarty_tpl->tpl_vars['gender']->value->id;?>
-"<?php if (isset($_POST['id_gender'])&&$_POST['id_gender']==$_smarty_tpl->tpl_vars['gender']->value->id) {?> checked="checked"<?php }?> />
-									<?php echo $_smarty_tpl->tpl_vars['gender']->value->name;?>
-
-								</label>
-							</div>
-						<?php } ?>
-					</div> -->
 					<div class="required form-group">
 						<label for="firstname"><?php echo smartyTranslate(array('s'=>'First name'),$_smarty_tpl);?>
  <sup>*</sup></label>
@@ -231,57 +197,6 @@ $_smarty_tpl->tpl_vars['gender']->_loop = true;
 						<input type="text" class="is_required validate form-control" data-validate="isName" id="lastname" name="lastname" value="<?php if (isset($_POST['lastname'])) {?><?php echo $_POST['lastname'];?>
 <?php }?>" />
 					</div>
-					<!-- <div class="form-group date-select">
-						<label><?php echo smartyTranslate(array('s'=>'Date of Birth'),$_smarty_tpl);?>
-</label>
-						<div class="row">
-							<div class="col-xs-4">
-								<select id="days" name="days" class="form-control">
-									<option value="">-</option>
-									<?php  $_smarty_tpl->tpl_vars['day'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['day']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['days']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['day']->key => $_smarty_tpl->tpl_vars['day']->value) {
-$_smarty_tpl->tpl_vars['day']->_loop = true;
-?>
-										<option value="<?php echo $_smarty_tpl->tpl_vars['day']->value;?>
-" <?php if (($_smarty_tpl->tpl_vars['sl_day']->value==$_smarty_tpl->tpl_vars['day']->value)) {?> selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['day']->value;?>
-&nbsp;&nbsp;</option>
-									<?php } ?>
-								</select>
-								
-							</div>
-							<div class="col-xs-4">
-								<select id="months" name="months" class="form-control">
-									<option value="">-</option>
-									<?php  $_smarty_tpl->tpl_vars['month'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['month']->_loop = false;
- $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['months']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['month']->key => $_smarty_tpl->tpl_vars['month']->value) {
-$_smarty_tpl->tpl_vars['month']->_loop = true;
- $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['month']->key;
-?>
-										<option value="<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
-" <?php if (($_smarty_tpl->tpl_vars['sl_month']->value==$_smarty_tpl->tpl_vars['k']->value)) {?> selected="selected"<?php }?>><?php echo smartyTranslate(array('s'=>$_smarty_tpl->tpl_vars['month']->value),$_smarty_tpl);?>
-&nbsp;</option>
-									<?php } ?>
-								</select>
-							</div>
-							<div class="col-xs-4">
-								<select id="years" name="years" class="form-control">
-									<option value="">-</option>
-									<?php  $_smarty_tpl->tpl_vars['year'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['year']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['years']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['year']->key => $_smarty_tpl->tpl_vars['year']->value) {
-$_smarty_tpl->tpl_vars['year']->_loop = true;
-?>
-										<option value="<?php echo $_smarty_tpl->tpl_vars['year']->value;?>
-" <?php if (($_smarty_tpl->tpl_vars['sl_year']->value==$_smarty_tpl->tpl_vars['year']->value)) {?> selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['year']->value;?>
-&nbsp;&nbsp;</option>
-									<?php } ?>
-								</select>
-							</div>
-						</div>
-					</div> -->
 					<?php if (isset($_smarty_tpl->tpl_vars['newsletter']->value)&&$_smarty_tpl->tpl_vars['newsletter']->value) {?>
 						<div class="checkbox">
 							<label for="newsletter">
@@ -609,28 +524,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		</form>
 	<?php }?>
 <?php } else { ?>
-	<!--<?php if (isset($_smarty_tpl->tpl_vars['account_error']->value)) {?>
-	<div class="error">
-		<?php ob_start();?><?php echo count($_smarty_tpl->tpl_vars['account_error']->value);?>
-<?php $_tmp8=ob_get_clean();?><?php if ($_tmp8==1) {?>
-			<p><?php echo smartyTranslate(array('s'=>'There\'s at least one error'),$_smarty_tpl);?>
- :</p>
-			<?php } else { ?>
-			<p><?php echo smartyTranslate(array('s'=>'There are %s errors','sprintf'=>array(count($_smarty_tpl->tpl_vars['account_error']->value))),$_smarty_tpl);?>
- :</p>
-		<?php }?>
-		<ol>
-			<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['account_error']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value) {
-$_smarty_tpl->tpl_vars['v']->_loop = true;
-?>
-				<li><?php echo $_smarty_tpl->tpl_vars['v']->value;?>
-</li>
-			<?php } ?>
-		</ol>
-	</div>
-	<?php }?>-->
 	<form action="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['link']->value->getPageLink('authentication',true), ENT_QUOTES, 'UTF-8', true);?>
 " method="post" id="account-creation_form" class="std box">
 		<?php echo $_smarty_tpl->tpl_vars['HOOK_CREATE_ACCOUNT_TOP']->value;?>
@@ -640,29 +533,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </h3>
 			<p class="required"><sup>*</sup><?php echo smartyTranslate(array('s'=>'Required field'),$_smarty_tpl);?>
 </p>
-			<!-- <div class="clearfix">
-				<label><?php echo smartyTranslate(array('s'=>'Title'),$_smarty_tpl);?>
-</label>
-				<br />
-				<?php  $_smarty_tpl->tpl_vars['gender'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['gender']->_loop = false;
- $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['genders']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['gender']->key => $_smarty_tpl->tpl_vars['gender']->value) {
-$_smarty_tpl->tpl_vars['gender']->_loop = true;
- $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['gender']->key;
-?>
-					<div class="radio-inline">
-						<label for="id_gender<?php echo $_smarty_tpl->tpl_vars['gender']->value->id;?>
-" class="top">
-							<input type="radio" name="id_gender" id="id_gender<?php echo $_smarty_tpl->tpl_vars['gender']->value->id;?>
-" value="<?php echo $_smarty_tpl->tpl_vars['gender']->value->id;?>
-" <?php if (isset($_POST['id_gender'])&&$_POST['id_gender']==$_smarty_tpl->tpl_vars['gender']->value->id) {?>checked="checked"<?php }?> />
-						<?php echo $_smarty_tpl->tpl_vars['gender']->value->name;?>
 
-						</label>
-					</div>
-				<?php } ?>
-			</div> -->
 			<div class="required form-group">
 				<label for="customer_firstname"><?php echo smartyTranslate(array('s'=>'First name'),$_smarty_tpl);?>
  <sup>*</sup></label>
@@ -673,6 +544,12 @@ $_smarty_tpl->tpl_vars['gender']->_loop = true;
 				<label for="customer_lastname"><?php echo smartyTranslate(array('s'=>'Last name'),$_smarty_tpl);?>
  <sup>*</sup></label>
 				<input onkeyup="$('#lastname').val(this.value);" type="text" class="is_required validate form-control" data-validate="isName" id="customer_lastname" name="customer_lastname" value="<?php if (isset($_POST['customer_lastname'])) {?><?php echo $_POST['customer_lastname'];?>
+<?php }?>" />
+			</div>
+			<div class="required form-group">
+				<label for="phone_mobile"><?php echo smartyTranslate(array('s'=>'Mobile phone'),$_smarty_tpl);?>
+<sup>*</sup></label>
+				<input type="tel" class="is_required validate form-control" data-validate="isPhoneNumber" name="phone_mobile" id="phone_mobile" value="<?php if (isset($_POST['phone_mobile'])) {?><?php echo $_POST['phone_mobile'];?>
 <?php }?>" />
 			</div>
 			<div class="required form-group">
@@ -687,68 +564,6 @@ $_smarty_tpl->tpl_vars['gender']->_loop = true;
 				<input type="password" class="is_required validate form-control" data-validate="isPasswd" name="passwd" id="passwd" />
 				<span class="form_info"><?php echo smartyTranslate(array('s'=>'(Five characters minimum)'),$_smarty_tpl);?>
 </span>
-			</div>
-			<!-- <div class="form-group">
-				<label><?php echo smartyTranslate(array('s'=>'Date of Birth'),$_smarty_tpl);?>
-</label>
-				<div class="row">
-					<div class="col-xs-4">
-						<select id="days" name="days" class="form-control">
-							<option value="">-</option>
-							<?php  $_smarty_tpl->tpl_vars['day'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['day']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['days']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['day']->key => $_smarty_tpl->tpl_vars['day']->value) {
-$_smarty_tpl->tpl_vars['day']->_loop = true;
-?>
-								<option value="<?php echo $_smarty_tpl->tpl_vars['day']->value;?>
-" <?php if (($_smarty_tpl->tpl_vars['sl_day']->value==$_smarty_tpl->tpl_vars['day']->value)) {?> selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['day']->value;?>
-&nbsp;&nbsp;</option>
-							<?php } ?>
-						</select>
-						
-					</div> -->
-					<!-- <div class="col-xs-4">
-						<select id="months" name="months" class="form-control">
-							<option value="">-</option>
-							<?php  $_smarty_tpl->tpl_vars['month'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['month']->_loop = false;
- $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['months']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['month']->key => $_smarty_tpl->tpl_vars['month']->value) {
-$_smarty_tpl->tpl_vars['month']->_loop = true;
- $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['month']->key;
-?>
-								<option value="<?php echo $_smarty_tpl->tpl_vars['k']->value;?>
-" <?php if (($_smarty_tpl->tpl_vars['sl_month']->value==$_smarty_tpl->tpl_vars['k']->value)) {?> selected="selected"<?php }?>><?php echo smartyTranslate(array('s'=>$_smarty_tpl->tpl_vars['month']->value),$_smarty_tpl);?>
-&nbsp;</option>
-							<?php } ?>
-						</select>
-					</div>
-					<div class="col-xs-4">
-						<select id="years" name="years" class="form-control">
-							<option value="">-</option>
-							<?php  $_smarty_tpl->tpl_vars['year'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['year']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['years']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['year']->key => $_smarty_tpl->tpl_vars['year']->value) {
-$_smarty_tpl->tpl_vars['year']->_loop = true;
-?>
-								<option value="<?php echo $_smarty_tpl->tpl_vars['year']->value;?>
-" <?php if (($_smarty_tpl->tpl_vars['sl_year']->value==$_smarty_tpl->tpl_vars['year']->value)) {?> selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['year']->value;?>
-&nbsp;&nbsp;</option>
-							<?php } ?>
-						</select>
-					</div> -->
-					<p class="<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value) {?>required <?php }?>form-group">
-					<label for="phone_mobile"><?php echo smartyTranslate(array('s'=>'Mobile phone'),$_smarty_tpl);?>
-<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value) {?> <sup>**</sup><?php }?></label>
-					<input type="text" class="form-control" name="phone_mobile" id="phone_mobile" value="<?php if (isset($_POST['phone_mobile'])) {?><?php echo $_POST['phone_mobile'];?>
-<?php }?>" />
-				</p>
-				<?php if (isset($_smarty_tpl->tpl_vars['one_phone_at_least']->value)&&$_smarty_tpl->tpl_vars['one_phone_at_least']->value) {?>
-					<?php $_smarty_tpl->tpl_vars["atLeastOneExists"] = new Smarty_variable(true, null, 0);?>
-					<p class="inline-infos required">** <?php echo smartyTranslate(array('s'=>'You must register at least one phone number.'),$_smarty_tpl);?>
-</p>
-				<?php }?>
-				</div>
 			</div>
 			<?php if (isset($_smarty_tpl->tpl_vars['newsletter']->value)&&$_smarty_tpl->tpl_vars['newsletter']->value) {?>
 				<div class="checkbox">

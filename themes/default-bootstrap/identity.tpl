@@ -56,7 +56,7 @@
         <form action="{$link->getPageLink('identity', true)|escape:'html':'UTF-8'}" method="post" class="std">
             <fieldset>
                 <div class="clearfix">
-                    <label>{l s='Social title'}</label>
+                    <!-- <label>{l s='Social title'}</label>
                     <br />
                     {foreach from=$genders key=k item=gender}
                         <div class="radio-inline">
@@ -64,7 +64,7 @@
                             <input type="radio" name="id_gender" id="id_gender{$gender->id}" value="{$gender->id|intval}" {if isset($smarty.post.id_gender) && $smarty.post.id_gender == $gender->id}checked="checked"{/if} />
                             {$gender->name}</label>
                         </div>
-                    {/foreach}
+                    {/foreach} -->
                 </div>
                 <div class="required form-group">
                     <label for="firstname" class="required">
@@ -79,55 +79,14 @@
                     <input class="is_required validate form-control" data-validate="isName" type="text" name="lastname" id="lastname" value="{$smarty.post.lastname}" />
                 </div>
                 <div class="required form-group">
+                    <label for="phone_mobile" class="required">{l s='Mobile phone'}</label>
+                    <input type="tel" class="is_required validate form-control" data-validate="isPhoneNumber" name="phone_mobile" id="phone_mobile" value="{if isset($smarty.post.phone_mobile)}{$smarty.post.phone_mobile}{/if}" />
+                </div>
+                <div class="required form-group">
                     <label for="email" class="required">
                         {l s='E-mail address'}
                     </label>
                     <input class="is_required validate form-control" data-validate="isEmail" type="email" name="email" id="email" value="{$smarty.post.email}" />
-                </div>
-                <div class="form-group">
-                    <label>
-                        {l s='Date of Birth'}
-                    </label>
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <select name="days" id="days" class="form-control">
-                                <option value="">-</option>
-                                {foreach from=$days item=v}
-                                    <option value="{$v}" {if ($sl_day == $v)}selected="selected"{/if}>{$v}&nbsp;&nbsp;</option>
-                                {/foreach}
-                            </select>
-                        </div>
-                        <div class="col-xs-4">
-							{*
-								{l s='January'}
-								{l s='February'}
-								{l s='March'}
-								{l s='April'}
-								{l s='May'}
-								{l s='June'}
-								{l s='July'}
-								{l s='August'}
-								{l s='September'}
-								{l s='October'}
-								{l s='November'}
-								{l s='December'}
-							*}
-                            <select id="months" name="months" class="form-control">
-                                <option value="">-</option>
-                                {foreach from=$months key=k item=v}
-                                    <option value="{$k}" {if ($sl_month == $k)}selected="selected"{/if}>{l s=$v}&nbsp;</option>
-                                {/foreach}
-                            </select>
-                        </div>
-                        <div class="col-xs-4">
-                            <select id="years" name="years" class="form-control">
-                                <option value="">-</option>
-                                {foreach from=$years item=v}
-                                    <option value="{$v}" {if ($sl_year == $v)}selected="selected"{/if}>{$v}&nbsp;&nbsp;</option>
-                                {/foreach}
-                            </select>
-                        </div>
-                    </div>
                 </div>
                 <div class="required form-group">
                     <label for="old_passwd" class="required">

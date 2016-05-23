@@ -43,7 +43,7 @@
 			{include file="$tpl_dir./order-address.tpl"}
 		{else}
 			<!-- Create account / Guest account / Login block -->
-			{include file="$tpl_dir./order-opc-new-account.tpl"}
+			
 			<!-- END Create account / Guest account / Login block -->
 		{/if}
 		<!-- Carrier -->

@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2016-05-22 12:33:51
+<?php /* Smarty version Smarty-3.1.19, created on 2016-05-23 22:08:40
          compiled from "Z:\home\wp-odyssey\www\prestashop\admin9007aokte\themes\default\template\modal.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1721457417cffab5fc5-88441411%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5470574355380eb241-76190450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1721457417cffab5fc5-88441411',
+  'nocache_hash' => '5470574355380eb241-76190450',
   'function' => 
   array (
   ),
@@ -26,9 +26,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_57417cffb97a96_11801017',
+  'unifunc' => 'content_574355381f1609_15996509',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_57417cffb97a96_11801017')) {function content_57417cffb97a96_11801017($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_574355381f1609_15996509')) {function content_574355381f1609_15996509($_smarty_tpl) {?>
 <div class="modal fade" id="<?php echo $_smarty_tpl->tpl_vars['modal_id']->value;?>
 " tabindex="-1">
 	<div class="modal-dialog <?php if (isset($_smarty_tpl->tpl_vars['modal_class']->value)) {?><?php echo $_smarty_tpl->tpl_vars['modal_class']->value;?>

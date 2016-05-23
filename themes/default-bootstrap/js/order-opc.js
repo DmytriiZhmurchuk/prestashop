@@ -176,6 +176,7 @@ $(document).ready(function(){
 			params += 'alias='+encodeURIComponent($('#alias').val())+'&';
 			params += 'other='+encodeURIComponent($('#other').val())+'&';
 			params += 'is_new_customer='+encodeURIComponent($('#is_new_customer').val())+'&';
+			params += 'phone_mobile='+encodeURIComponent($('#phone_mobile').val())+'&';
 			// Clean the last &
 			params = params.substr(0, params.length-1);
 

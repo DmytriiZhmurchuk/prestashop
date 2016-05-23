@@ -59,6 +59,8 @@ class CustomerCore extends ObjectModel
     /** @var string e-mail */
     public $email;
 
+    public $phone_mobile;
+
     /** @var bool Newsletter subscription */
     public $newsletter;
 

@@ -1357,7 +1357,7 @@
   ),
   'AuthController' => 
   array (
-    'path' => '',
+    'path' => 'override/controllers/front/AuthController.php',
     'type' => 'class',
     'override' => false,
   ),
@@ -1957,7 +1957,7 @@
   ),
   'Customer' => 
   array (
-    'path' => '',
+    'path' => 'override/controllers/classes/Customer.php',
     'type' => 'class',
     'override' => false,
   ),
