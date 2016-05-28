@@ -114,9 +114,17 @@ class OrderController extends OrderControllerCore
     {
         // Update carrier selected on preProccess in order to fix a bug of
         // block cart when it's hooked on leftcolumn
+        if(Tools::isSubmit('message')) {
+            $msg = Tools::getValue('message');
+            $this->addOrderMessage($msg);
+        }
         if ($this->step == 3 && Tools::isSubmit('processCarrier')) {
             $this->processCarrier();
         }
+    }
+
+    protected function addOrderMessage($msg){
+            $this->_updateMessage(Tools::getValue('message'));
     }
 
     /**
