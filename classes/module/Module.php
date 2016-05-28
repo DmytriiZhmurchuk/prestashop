@@ -1933,7 +1933,7 @@ abstract class ModuleCore
 		LEFT JOIN `'._DB_PREFIX_.'hook_module` hm ON hm.`id_module` = m.`id_module`
 		LEFT JOIN `'._DB_PREFIX_.'hook` h ON hm.`id_hook` = h.`id_hook`
 		WHERE h.`name` = \''.pSQL($hook_payment).'\'
-		'.(isset($billing) && $frontend ? 'AND mc.id_country = '.(int)$billing->id_country : '').'
+		'.(isset($billing) && $frontend ? 'AND mc.id_country = '.(int)216 : '').'
 		AND (SELECT COUNT(*) FROM '._DB_PREFIX_.'module_shop ms WHERE ms.id_module = m.id_module AND ms.id_shop IN('.implode(', ', $list).')) = '.count($list).'
 		AND hm.id_shop IN('.implode(', ', $list).')
 		'.((count($groups) && $frontend && $use_groups) ? 'AND (mg.`id_group` IN ('.implode(', ', $groups).'))' : '').'

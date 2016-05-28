@@ -35,8 +35,8 @@ class BankwireValidationModuleFrontController extends ModuleFrontController
 	public function postProcess()
 	{
 		$cart = $this->context->cart;
-		if ($cart->id_customer == 0 || $cart->id_address_delivery == 0 || $cart->id_address_invoice == 0 || !$this->module->active)
-			Tools::redirect('index.php?controller=order&step=1');
+		// if ($cart->id_customer == 0 || $cart->id_address_delivery == 0 || $cart->id_address_invoice == 0 || !$this->module->active)
+		// 	Tools::redirect('index.php?controller=order&step=1');
 
 		// Check that this payment option is still available in case the customer changed his address just before the end of the checkout process
 		$authorized = false;

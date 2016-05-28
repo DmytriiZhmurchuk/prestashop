@@ -28,6 +28,17 @@ $(document).ready(function(){
 		submitFunction();
 	});
 	$('.is_customer_param').hide();
+	$(document).on('change','#transform_toaccount',function(){
+        var isChecked = $(this).is(':checked');
+        var passwordField = $('.password.account');
+        passwordField.removeClass('hidden');
+        if(isChecked){
+        	passwordField.find('input').val('');
+        	passwordField.fadeIn('slow');
+        }else {
+        	passwordField.fadeOut('slow');
+        }
+    });
 });
 
 function submitFunction()
