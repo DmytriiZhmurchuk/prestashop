@@ -163,13 +163,13 @@ function scrollCompensate()
 function responsiveResize()
 {
 	compensante = scrollCompensate();
-	if (($(window).width()+scrollCompensate()) <= 767 && responsiveflag == false)
+	if (($(window).width()+scrollCompensate()) <= 991 && responsiveflag == false)
 	{
 		accordion('enable');
 		accordionFooter('enable');
 		responsiveflag = true;
 	}
-	else if (($(window).width()+scrollCompensate()) >= 768)
+	else if (($(window).width()+scrollCompensate()) >= 991)
 	{
 		accordion('disable');
 		accordionFooter('disable');

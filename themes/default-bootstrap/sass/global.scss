@@ -81,7 +81,6 @@ header {
 		}
 		#header_logo {
 			padding-top: 15px;
-			@extend .col-sm-4;
 			@media (max-width: $screen-md) {
 				padding-top: 40px;
 			}
@@ -952,7 +951,7 @@ table.table_block td {
 			font-size: 14px;
 		}
 		// max 767px
-		@media (max-width: $screen-xs-max) {
+		@media (max-width: $screen-sm-max) {
 			position: relative;
 			&:after {
 				display: block;
@@ -980,7 +979,7 @@ table.table_block td {
 	.list-block {
 		margin-top: -8px;
 		// max 767px
-		@media (max-width: $screen-xs-max) {
+		@media (max-width: $screen-sm-max) {
 			margin-top: 0;
 		}
 		li {
@@ -1738,7 +1737,7 @@ div.star a:hover {
 	background-color: $dark-background;
 	// min 768px
 	@media (min-width: $screen-sm) {
-		background: url(../img/footer-bg.png) repeat-x $dark-background !important;
+		background: url(../img/footer-bg.png) repeat-x $dark-background ;
 	}
 	.container {
 		padding-bottom: 100px;
@@ -1754,7 +1753,7 @@ div.star a:hover {
 		.footer-block {
 			margin-top: 45px;
 			// max 767px
-			@media (max-width: $screen-xs-max) {
+			@media (max-width: $screen-sm-max) { //changed zd
 				margin-top: 20px;
 			}
 		}
@@ -1770,7 +1769,7 @@ div.star a:hover {
 			margin: 0 0 13px 0;
 			cursor: pointer;
 			// max 767px
-			@media (max-width: $screen-xs-max) {
+			@media (max-width: $screen-sm-max) { //changed zd
 				position: relative;
 				margin-bottom: 0;
 				padding-bottom: 13px;
@@ -1802,13 +1801,13 @@ div.star a:hover {
 		#block_contact_infos {
 			border-left: 1px solid #515151;
 			// max 767px
-			@media (max-width: $screen-xs-max) {
+			@media (max-width: $screen-sm-max) { //changed zd
 				border: none;
 			}
 			> div {
 				padding: 0 0 0 5px;
 				// max 767px
-				@media (max-width: $screen-xs-max) {
+				@media (max-width:$screen-sm-max) { //changed zd
 					padding-left: 0;
 				}
 				ul {
@@ -1841,14 +1840,14 @@ div.star a:hover {
 			width: 50%;
 			padding: 22px 15px 0 15px;
 			// max 767px
-			@media (max-width: $screen-xs-max) {
+			@media (max-width: $screen-xs-max) { 
 				width: 100%;
 				float: left;
 				padding-top: 5px;
 			}
 			ul {
 				float: right;
-				@media (max-width: $screen-xs-max) {
+				@media (max-width: $screen-sm-max) { //changed zd
 					float: none;
 				}
 				li {
@@ -1948,7 +1947,7 @@ div.star a:hover {
 				text-transform: none;
 				padding: 0 10px 0 0;
 				// max 767px
-				@media (max-width: $screen-xs-max) {
+				@media (max-width: $screen-sm-max) {
 					display: none;
 					text-align: center;
 				}

@@ -46,8 +46,9 @@ class Psmailin
         $ch = curl_init($called_url);
         $auth_header = 'api-key:'.$this->api_key;
         $content_header = "Content-Type:application/json";
+        $track_header = "sib-plugin:ps-2.5.8";
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth_header, $content_header));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth_header, $content_header, $track_header));
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HEADER, 0);

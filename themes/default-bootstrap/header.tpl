@@ -94,7 +94,7 @@
 					<div>
 						<div class="container">
 							<div class="row">
-								<div id="header_logo">
+								<div id="header_logo" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 									<a href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}">
 										<img class="logo img-responsive" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"{if isset($logo_image_width) && $logo_image_width} width="{$logo_image_width}"{/if}{if isset($logo_image_height) && $logo_image_height} height="{$logo_image_height}"{/if}/>
 									</a>
@@ -118,8 +118,8 @@
 					</div>
 					<div class="row">
 						{if isset($left_column_size) && !empty($left_column_size)}
-						<div id="left_column" class="column col-xs-12 col-sm-{$left_column_size|intval}">{$HOOK_LEFT_COLUMN}</div>
+						<div id="left_column" class="column col-xs-12 col-sm-12 col-md-{$left_column_size|intval}">{$HOOK_LEFT_COLUMN}</div>
 						{/if}
 						{if isset($left_column_size) && isset($right_column_size)}{assign var='cols' value=(12 - $left_column_size - $right_column_size)}{else}{assign var='cols' value=12}{/if}
-						<div id="center_column" class="center_column col-xs-12 col-sm-{$cols|intval}">
+						<div id="center_column" class="center_column col-xs-12 col-sm-12 col-md-{$cols|intval}">
 	{/if}

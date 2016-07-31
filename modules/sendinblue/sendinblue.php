@@ -74,7 +74,7 @@ class Sendinblue extends Module
         $this->name = 'sendinblue';
         $this->tab = 'emailing';
         $this->author = 'SendinBlue';
-        $this->version = '2.5.7';
+        $this->version = '2.5.8';
         $this->module_key = 'fa4c321492032ab1bdeea359aa1e4e3d';
         
         parent::__construct();
@@ -2167,7 +2167,7 @@ WHERE email = "' . pSQL($this->email) . '"');
             $ndata = $data;
         }
         
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:'));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:', 'sib-plugin:ps-2.5.8'));
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $ndata);
@@ -2205,7 +2205,7 @@ WHERE email = "' . pSQL($this->email) . '"');
             $ndata = $data;
         }
         
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:'));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:', 'sib-plugin:ps-2.5.8'));
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $ndata);
